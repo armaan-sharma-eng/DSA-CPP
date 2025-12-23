@@ -1,36 +1,33 @@
 #include <iostream>
 using namespace std;
 
-template <class T>
+template <class t1,class t2>
 
-class swapping
+class print
     {
-        T a,b,temp;
+        t1 x;
+        t2 y;
         public:
 
-        void setvalue(T a,T b)
+        void setvalue(t1 a,t2 b)
             {
-                this->a=a;
-                this->b=b;
+                x=a;
+                y=b;
             }
-        
-        void doswap()
-            {
-                temp=a;
-                a=b;
-                b=temp;
-            }
-        
+
         void show()
             {
-                cout<<a<<"  "<<b;
-            }
+                cout<<x<<"    "<<y<<endl;
+            }    
     };
 
 int main()
     {
-        swapping <int> obj;
-        obj.setvalue(5,6);
-        obj.doswap();
-        obj.show();
+        print <int,char> obj1;
+        obj1.setvalue(5,65);
+        obj1.show();
+
+        print <char,float> obj2;
+        obj2.setvalue('c',7.2);
+        obj2.show();
     }
