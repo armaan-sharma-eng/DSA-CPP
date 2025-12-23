@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-template <class t>
+template <class T>
 
-class swaping
+class swapping
     {
-        t a,b,temp;
+        T a,b,temp;
         public:
 
-        void setvalue(t a,t b)
+        void setvalue(T a,T b)
             {
                 this->a=a;
                 this->b=b;
@@ -29,7 +29,7 @@ class swaping
 
 int main()
     {
-        swaping <int> obj;
+        swapping <int> obj;
         obj.setvalue(5,6);
         obj.doswap();
         obj.show();
