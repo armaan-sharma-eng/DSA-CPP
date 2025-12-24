@@ -5,7 +5,7 @@ class anagram
     {
         string str1,str2;
         int len1,len2,i,j,count=0;
-        int *b1,*f1;
+        int *b,*f;
         public:
 
         anagram(string s1,string s2)
@@ -14,17 +14,16 @@ class anagram
                 str2=s2;
             }
         
-        int length()
+        void length()
             {
                 for(len1=0;str1[len1]!='\0';len1++);
                 for(len2=0;str2[len2]!='\0';len2++);
                 //cout<<len1<<"\t"<<len2<<endl;
-                int b[len1],f[len1];
-                int x=find_frequency(b,f);
-                return x;                
+                b=new int[len1],f=new int[len1];
+                find_frequency();                
             }
 
-        int find_frequency(int b[],int f[])
+        void find_frequency()
             {
                 for(i=0;i<len1;i++)
                 {
@@ -51,17 +50,14 @@ class anagram
                     f[i]=count;
                 }
 
-                for(i=0;i<len1;i++)
+               /* for(i=0;i<len1;i++)
                     {
                         if(b[i]==-1)
-                        //cout<<str1[i]<<"  "<<f[i]<<endl;
-                    }
-
-                int x=check(b,f);  
-                return x;  
+                        cout<<str1[i]<<"  "<<f[i]<<endl;
+                    }*/  
             }    
 
-        bool check(int b[],int f[])
+        bool check()
             {
                 if(len1!=len2)
                 return false;
@@ -94,15 +90,10 @@ int main()
         cin>>s2;
         
         class anagram obj(s1,s2);
-        int x=obj.length();
-        cout<<endl<<endl<<x<<endl;
-        if(x)
-            {
-                cout<<"yes this string is anagram\n";
-            }
-        
+        obj.length();
+        if(obj.check())
+            cout<<"\nYes,these strings are anagram\n";
+                
         else
-        {
-            printf("no this string is not anagram");
-        }    
+            printf("\nNo,these strings are not anagram\n"); 
     }
