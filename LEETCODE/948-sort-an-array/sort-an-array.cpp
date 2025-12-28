@@ -6,12 +6,12 @@ public:
         for(auto val:nums)
             mp[val]++;
 
-        nums.clear();
+        vector <int> nums1;
         for(auto val:mp)
             {   
                 for(int i=0;i<val.second;i++)
-                nums.push_back(val.first);
+                nums1.push_back(val.first);
             }
-        return nums;
+        return nums1;
     }
 };
