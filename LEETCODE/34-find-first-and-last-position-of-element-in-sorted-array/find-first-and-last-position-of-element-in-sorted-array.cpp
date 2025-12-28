@@ -3,7 +3,7 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) 
     {
         int fi=-1,li=-1;
-        int i,j;
+        int i;
         for(i=0;i<nums.size();i++)
             {
                 if(target==nums[i])
@@ -17,7 +17,7 @@ public:
                 return nums;
             }
         fi=i;    
-
+        int j;
         for(j=i;j<nums.size();j++)
             {
                 if(nums[j]!=nums[i])
