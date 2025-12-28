@@ -2,15 +2,14 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) 
     {
-        int i=0,j;
-        for(j=i+1;j<nums.size();j++)
+        int i,j;
+        for(i=0;i<nums.size();i++)
             {
-                if(nums[i]+nums[j]==target)
-                    break;
-                if(j==nums.size()-1)
+                auto ptr=find(nums.begin()+(i+1),nums.end(),target-nums[i]);
+                if(ptr!=nums.end())
                     {
-                        i++;
-                        j=i;
+                        j=ptr-nums.begin();
+                        break;
                     }
             }
             nums.clear();
