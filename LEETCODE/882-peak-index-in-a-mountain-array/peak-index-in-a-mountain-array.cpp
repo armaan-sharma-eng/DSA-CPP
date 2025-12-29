@@ -9,11 +9,10 @@ public:
                 if(arr[mid]>arr[mid-1]&&arr[mid+1]<arr[mid])
                 return mid;
 
-                else if(arr[mid]>arr[mid-1])
+                if(arr[mid]>arr[mid-1])
                 begin=mid;
 
-                else
-                //if(arr[mid]<arr[mid-1])
+                if(arr[mid]<arr[mid-1])
                 end=mid;
             }
         return -1;
