@@ -20,15 +20,7 @@ public:
                         begin=mid+1;
                     }
             }
-        int fi=-1,li=-1;
-        if(pos==-1)
-            {
-                nums.clear();
-                nums.push_back(fi);
-                nums.push_back(li);
-                return nums;
-            }
-        
+        int fi=-1,li=-1; 
         
         for(int i=pos;i>=0;i--)
             {
