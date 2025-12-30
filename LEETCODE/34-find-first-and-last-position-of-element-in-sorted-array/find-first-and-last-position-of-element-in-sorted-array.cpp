@@ -1,48 +1,56 @@
-class Solution {
-public:
-    vector<int> searchRange(vector<int>& nums, int target) 
+class Solution 
     {
-        int begin=0,end=nums.size()-1,mid,pos=-1;
-        while(begin<=end)
-            {
-                mid=begin-(begin-end)/2;
-                if(target==nums[mid])
-                    {
-                        pos=mid;
-                        break;
-                    }
-                else if(nums[mid]>target)
-                    {
-                        end=mid-1;
-                    }
-                else
-                    {
-                        begin=mid+1;
-                    }
-            }
-        int fi=-1,li=-1; 
-        
-        for(int i=pos;i>=0;i--)
-            {
-                fi=i;
-                if(nums[pos]!=nums[i])
+        public:
+            vector<int> searchRange(vector<int>& nums, int target) 
                 {
-                    fi=i+1;
-                    break;
+                    vector<int> aryy;
+                    aryy.push_back(firstIdx(nums,target));
+                    aryy.push_back(lastIdx(nums,target));
+                    return aryy;
                 }
-            }
-        for(int i=pos;i<nums.size();i++)
-            {
-                li=i;
-                if(nums[pos]!=nums[i])
+
+            int firstIdx(vector<int >arr,int target)
                 {
-                    li=i-1;
-                    break;
+                    int pos=-1,mid;
+                    int begin=0;
+                    int end=arr.size()-1;
+                    while(begin<=end)
+                        {
+                            mid=begin+(end-begin)/2;
+                            if(target==arr[mid])
+                                {
+                                    pos=mid;
+                                    end=mid-1;
+                                }
+
+                            else if(target<arr[mid])
+                                end=mid-1;  
+                            else
+                                begin=mid+1;
+                        }
+                    return pos;
                 }
-            }
-        nums.clear();
-        nums.push_back(fi);
-        nums.push_back(li);
-        return nums;
-    }
-};
+
+            int lastIdx(vector <int >arr,int target)
+                {
+                    int pos=-1,mid;
+                    int begin=0;
+                    int end=arr.size()-1;
+                    while(begin<=end)
+                        {
+                            mid=begin+(end-begin)/2;
+                            if(target==arr[mid])
+                                {
+                                pos=mid;
+                                begin=mid+1;
+                                }
+
+                            else if(target<arr[mid])
+                                end=mid-1;  
+                            else
+                                begin=mid+1;
+                        }
+                    return pos;
+                }
+    };      
+
