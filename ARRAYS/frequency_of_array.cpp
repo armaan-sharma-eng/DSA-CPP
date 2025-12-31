@@ -38,7 +38,7 @@ class ARRAY
                                             b[j]=0;
                                         }
                                 }
-                            }
+                        }
                             f[i]=count;
                     }
             }  

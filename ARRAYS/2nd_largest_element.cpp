@@ -26,7 +26,7 @@ class ARRAY
                 m1=INT_MIN;
                 m2=INT_MIN;
 
-                if(m2=INT_MIN)
+                if(m2==INT_MIN)
                     {
                         cout<<"2nd largest element does not exist";
                         return;
@@ -43,7 +43,8 @@ class ARRAY
                         if(ary[i]>m2&&ary[i]<m1)
                             m2=ary[i];    
                     }
-            cout<<m2<<" is our 2nd largest value";            }    
+                cout<<m2<<" is our 2nd largest value";            
+            }    
 
     };  
     

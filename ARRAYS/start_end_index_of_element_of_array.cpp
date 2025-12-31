@@ -43,7 +43,7 @@ int main()
                     cin>>ary[i];
                 }
 
-        cout<<"\nEnter wanted value: "        ;
+        cout<<"\nEnter wanted value: ";
         cin>>wanted;
 
         ARRAY obj(ary,N,wanted);
