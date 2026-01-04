@@ -10,6 +10,9 @@ public:
                     ary.push_back(i);
             }
         nums.clear();
-        return ary;
+        nums=ary;
+        ary.clear();
+        ary.shrink_to_fit();
+        return nums;
     }
 };
