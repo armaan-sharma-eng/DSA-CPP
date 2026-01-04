@@ -9,6 +9,7 @@ public:
                 if(nums[i]==target)
                     ary.push_back(i);
             }
+        nums.clear();
         return ary;
     }
 };
