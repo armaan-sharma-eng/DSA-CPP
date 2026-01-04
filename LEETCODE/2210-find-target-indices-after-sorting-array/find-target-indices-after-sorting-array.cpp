@@ -9,10 +9,6 @@ public:
                 if(nums[i]==target)
                     ary.push_back(i);
             }
-        nums.clear();
-        nums=ary;
-        ary.clear();
-        ary.shrink_to_fit();
-        return nums;
+        return ary;
     }
 };
