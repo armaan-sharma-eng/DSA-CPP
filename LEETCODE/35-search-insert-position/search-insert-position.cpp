@@ -3,7 +3,7 @@ public:
     int searchInsert(vector<int>& nums, int target) 
     {
         int beg=0,end=nums.size()-1;
-        int mid,minidx,maxidx;
+        int mid,minidx;
 
 
         while(beg<=end)
