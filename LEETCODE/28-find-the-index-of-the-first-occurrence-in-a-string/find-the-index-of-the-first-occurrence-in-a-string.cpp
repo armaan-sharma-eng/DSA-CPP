@@ -13,8 +13,7 @@ public:
                     }
                 else
                     {
-                        if(j!=0)
-                            i=i-j;
+                        i=i-j;
                         j=0;
                     }
             }
