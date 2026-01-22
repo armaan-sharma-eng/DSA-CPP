@@ -12,9 +12,7 @@ public:
     {
         ListNode* sp=head;
         ListNode* fp=head;
-        if(fp==NULL)
-            return false;
-
+        
         while(fp!=NULL&&fp->next!=NULL)
         {
             fp=fp->next->next;
