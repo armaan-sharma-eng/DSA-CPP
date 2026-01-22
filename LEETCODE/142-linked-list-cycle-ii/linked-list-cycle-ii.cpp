@@ -12,7 +12,7 @@ public:
     {
         if(head==NULL)
             return NULL;
-            
+
         int x=0;
         ListNode* sp=head;
         ListNode* fp=head;
@@ -25,19 +25,18 @@ public:
             if(fp==sp)
             {
                 x=1;
+                ListNode* tp=head;
+                while(fp!=tp)
+                {
+                    fp=fp->next;
+                    tp=tp->next;
+                }
                 break;
             }  
         }
         if (x)
-        {
-            ListNode* tp=head;
-            while(fp!=tp)
-            {
-                fp=fp->next;
-                tp=tp->next;
-            }
-            return tp;
-        }
+            return fp;
+
         return NULL;
     }
 };
