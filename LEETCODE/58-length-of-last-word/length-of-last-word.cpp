@@ -2,7 +2,6 @@ class Solution {
 public:
     int lengthOfLastWord(string s) 
     {
-        string last;
         int count=0,lastcount=0;
         for(auto val:s)
         {
