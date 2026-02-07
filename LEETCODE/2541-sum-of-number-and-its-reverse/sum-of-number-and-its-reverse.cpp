@@ -1,23 +1,19 @@
 class Solution {
 public:
 
-    int reverse(int n)
-    {
-        int rev=0;
-        while(n!=0)
-        {
-            int r=n%10;
-            rev=rev*10+r;
-            n=n/10;
-        }
-
-        return rev;
-    }
     bool sumOfNumberAndReverse(int num) 
     {
-        for(int i=0;i<=num;i++)
+        for(int j=0;j<=num;j++)
         {
-            if(i+reverse(i)==num)
+            int i=j;
+            int rev=0;
+            while(i!=0)
+            {
+                int r=i%10;
+                rev=rev*10+r;
+                i=i/10;
+            }
+            if(j+rev==num)
                 return true;
         }
         return false;
