@@ -6,7 +6,7 @@ public:
 
         for(auto val:operations)
         {
-            if(val[0]=='-' || val[val.length()-1]=='-')
+            if(val=="--X" || val=="X--")
                 x-=1;
 
             else
