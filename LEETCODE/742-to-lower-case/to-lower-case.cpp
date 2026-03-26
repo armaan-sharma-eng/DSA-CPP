@@ -3,14 +3,11 @@ public:
     string toLowerCase(string s) 
     {
         string t="";
-        for(auto val:s)
+        for(auto &val:s)
         {
             if(val>='A' && val<='Z')
-                t+=val+32;
-            
-            else
-                t+=val;
+                val+=32;
         }
-        return t;
+        return s;
     }
 };
