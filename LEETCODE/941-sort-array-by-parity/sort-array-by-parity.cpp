@@ -7,15 +7,12 @@ public:
         while(i<j)
         {
             if(nums[i]%2==1)
-            {
                 swap(nums[i],nums[j]);
-            }
             else
                 i++;
+                
             if(nums[j]%2==0)
-            {
                 swap(nums[i],nums[j]);
-            }
             else
                 j--;
         }
