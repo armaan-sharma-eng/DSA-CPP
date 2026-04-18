@@ -21,4 +21,8 @@ DSA practice using CPP
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0713-subarray-product-less-than-k](https://github.com/armaan-sharma-eng/DSA-CPP/tree/main/0713-subarray-product-less-than-k/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3783-mirror-distance-of-an-integer](https://github.com/armaan-sharma-eng/DSA-CPP/tree/main/3783-mirror-distance-of-an-integer/) | Easy |
 <!---LeetCode Topics End-->
