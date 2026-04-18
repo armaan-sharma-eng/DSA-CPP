@@ -25,4 +25,12 @@ DSA practice using CPP
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3783-mirror-distance-of-an-integer](https://github.com/armaan-sharma-eng/DSA-CPP/tree/main/3783-mirror-distance-of-an-integer/) | Easy |
+## Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0203-remove-linked-list-elements](https://github.com/armaan-sharma-eng/DSA-CPP/tree/main/0203-remove-linked-list-elements/) | Easy |
+## Recursion
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0203-remove-linked-list-elements](https://github.com/armaan-sharma-eng/DSA-CPP/tree/main/0203-remove-linked-list-elements/) | Easy |
 <!---LeetCode Topics End-->
